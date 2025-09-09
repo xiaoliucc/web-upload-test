@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <base href="https://xiaoliucc.github.io/web-upload-test/" target="_blank">
+    <!-- <base href="https://xiaoliucc.github.io/web-upload-test/" target="_blank"> -->
     <title>星穹铁道</title>
     <link rel="stylesheet" href="mycss/base.css">
     <link rel="stylesheet" href="mycss/background.css">
@@ -23,10 +23,14 @@
         <a href="https://www.miyoushe.com/sr" id="nav-community">社区</a>
         <div id="underline"></div>
     </div>
-    <!-- <img src="image/video.png" alt="Video Thumbnail" id="thumbnail">
+    <img src="image/video.png" alt="Video Thumbnail" id="thumbnail">
     <div id="overlay">
         <div class="video-container" id="video-container">
-            <video src="video/2.mp4" type="video/mp4" controls loop></video>
+            <!-- <video src="video/2.mp4" type="video/mp4" controls loop></video> -->
+            <iframe id="bilibili"
+                src="https://player.bilibili.com/player.html?isOutside=true&aid=114940891369288&bvid=BV19RhAzcEdU&cid=31479695226&p=1&autoplay=1"
+                scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true">
+            </iframe>
         </div>
     </div>
     <script>
@@ -35,11 +39,13 @@
             var videoContainer = document.getElementById('video-container');
             var overlay = document.getElementById('overlay');
             var video = document.querySelector('video');
+            var bilibiliIframe = document.getElementById('bilibili');
 
             thumbnail.addEventListener('click', function () {
                 videoContainer.style.display = 'flex';
                 overlay.style.display = 'block';
                 video.play();
+                // bilibiliIframe.src = bilibiliIframe.src;
             });
             video.addEventListener('click', function (event) {
                 event.stopPropagation(); // 阻止事件向上传播
@@ -49,9 +55,11 @@
                 overlay.style.display = 'none';
                 video.pause();
                 video.currentTime = 0;
+                // 重置 iframe 以停止播放
+                // bilibiliIframe.src = bilibiliIframe.src.replace('autoplay=1', 'autoplay=0');
             });
         });
-    </script> -->
+    </script>
 </body>
 
 </html>

@@ -16,6 +16,13 @@
     display: block;
 }
 
+#bilibili {
+    cursor: pointer;
+    width: 800px;
+    height: 500px;
+    display: block;
+}
+
 #overlay {
     position: fixed;
     top: 0;
