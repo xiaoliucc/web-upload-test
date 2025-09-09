@@ -1,0 +1,177 @@
+body {
+    font-family: Arial, sans-serif;
+    padding-top: 60px;
+    /* 留出足够的空间给固定的导航栏 */
+    /* overflow: hidden; */
+}
+
+.nav {
+    position: fixed;
+    /* 固定导航栏 */
+    top: 0;
+    left: 0;
+    /* 导航栏距离页面顶部的位置 */
+    width: 100%;
+    height: 50px;
+    /* 导航栏宽度 */
+    display: flex;
+    justify-content: space-around;
+    background-color: #333;
+    padding: 10px 0;
+    z-index: 1000;
+    /* 确保导航栏在其他内容上方 */
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+.nav a:hover,
+.nav a.active {
+    border-bottom: 3px solid yellow;
+}
+
+.logo {
+    width: 202px;
+    height: 122px;
+}
+
+.return-image {
+    cursor: pointer;
+    position: relative;
+    top: 132px;
+    left: 91px;
+    width: 115px;
+}
+
+.world-title {
+    position: relative;
+    color: #debe79;
+    text-align: center;
+    font-size: 3rem;
+    top: 107px
+}
+
+.world-title img {
+    top: 35px;
+    width: 18rem;
+    height: .07rem;
+}
+
+.world-title img:first-child {
+    position: absolute;
+    left: 100px;
+    margin-right: 10px;
+}
+
+.world-title img:last-child {
+    position: absolute;
+    right: 100px;
+    margin-left: 10px;
+}
+
+.world-info {
+    position: relative;
+    top: 52px;
+    color: #c9c9c9;
+    display: flex;
+    justify-content: center;
+    -webkit-box-align: center;
+}
+
+.world-info p {
+    text-align: 13px;
+    width: 717px;
+    white-space: pre-wrap;
+    line-height: 1.7;
+    text-indent: 2em;
+    /* 设置首行缩进为2em */
+    vertical-align: middle;
+    /* 在垂直方向上居中对齐 */
+}
+
+.image-layout {
+    display: flex;
+    /* -webkit-box-pack: center; */
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.main-content {
+    width: 810px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    min-height: auto;
+}
+
+.show-pic {
+    height: 218px;
+    margin-right: 4px;
+    margin-bottom: 4px;
+    max-width: 100%;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    /* 添加过渡效果 */
+}
+
+.show-pic:hover {
+    transform: scale(1.05);
+    /* 悬停时放大 105% */
+}
+
+.img-data {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.detial {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #debe79;
+    font-size: 11px;
+    transition: opacity 0.3s ease, border-color 0.3s ease;
+    /* 添加过渡效果 */
+    border: 4px solid transparent;
+    opacity: 0;
+    /* 初始状态下隐藏 */
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.detial p {
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.detial p strong {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.show-pic:hover .detial {
+    opacity: 1;
+    /* 鼠标悬停时显示 */
+}
+
+.footer {
+    color: white;
+    background-color: black;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

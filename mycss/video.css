@@ -1,0 +1,34 @@
+.video-container {
+    position: absolute;
+    top: 165px;
+    width: 100%;
+    /* 或者设置为固定宽度，如 width: 800px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.video-container video {
+    cursor: pointer;
+    width: 800px;
+    height: 500px;
+    display: block;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+#thumbnail {
+    cursor: pointer;
+    position: absolute;
+    top: 400px;
+    left: 600px;
+}

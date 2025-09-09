@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>星穹铁道</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding-top: 50px;
+            /* 留出足够的空间给固定的导航栏 */
+        }
+
+        .navbar {
+            position: fixed;
+            /* 固定导航栏 */
+            top: 0;
+            /* 导航栏距离页面顶部的位置 */
+            width: 100%;
+            /* 导航栏宽度 */
+            display: flex;
+            justify-content: space-around;
+            background-color: #333;
+            padding: 10px 0;
+            z-index: 1000;
+            /* 确保导航栏在其他内容上方 */
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .navbar a:hover,
+        .navbar a.active {
+            border-bottom: 3px solid yellow;
+        }
+
+        section {
+            height: 100vh;
+            transition: background-image 0.3s ease;
+        }
+
+        /* 在原有的CSS中添加下划线的样式 */
+        #underline {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            height: 3px;
+            background-color: yellow;
+            transition: all 0.3s ease;
+        }
+
+        /* ...其他样式保持不变... */
+    </style>
+    <script src="a.js"></script>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <div></div>
+        <a href="#home" id="nav-home">首页</a>
+        <a href="#characters" id="nav-characters">角色</a>
+        <a href="#world" id="nav-world">世界</a>
+        <a href="#community" id="nav-community">社区</a>
+        <div id="underline"></div>
+    </div>
+
+    <section id="home"></section>
+    <section id="characters"></section>
+    <section id="world"></section>
+    <section id="community"></section>
+
+    <script>
+        // JavaScript to handle scrolling and active link underline
+        /* ...JavaScript代码保持不变... */
+    </script>
+
+</body>
+
+</html>

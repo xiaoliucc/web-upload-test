@@ -1,0 +1,51 @@
+.world-map {
+    position: relative;
+    display: inline-block;
+    /* 让容器紧贴图片 */
+    width: 100%;
+    max-width: 1600px;
+    /* 你原图宽度，按需调 */
+}
+
+.world-bg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hotspot {
+    position: absolute;
+    display: block;
+    /* 用百分比坐标 + 百分比宽高 */
+    /* 例子：空间站 */
+    /* 原图坐标：left: 100px, top: 332px, w: 111px, h: 96px */
+    /* 原图宽度假设为 1600px，高 900px */
+    left: 5.25%;
+    top: 40.9%;
+    width: 10.94%;
+    height: 14.7%;
+    background: rgba(255, 0, 0, 0.2);
+    /* 调试用，看得见 */
+    cursor: pointer;
+}
+
+#area2 {
+    left: 34.25%;
+    top: 22.4%;
+    width: 9.5%;
+    height: 14.8%;
+}
+
+#area3 {
+    left: 50.9%;
+    top: 65.7%;
+    width: 12.94%;
+    height: 15.7%;
+}
+
+#area4 {
+    left: 79.25%;
+    top: 21%;
+    width: 12.6%;
+    height: 22.3%;
+}

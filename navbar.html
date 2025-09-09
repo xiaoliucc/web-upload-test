@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" id="home">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>星穹铁道</title>
+    <link rel="stylesheet" href="mycss/base.css">
+    <link rel="stylesheet" href="mycss/background.css">
+    <link rel="stylesheet" href="mycss/mouse.css">
+    <link rel="stylesheet" href="mycss/video.css">
+</head>
+
+<body>
+    <div class="nav">
+        <div>
+            <img src="image/logo.png" alt="Logo" class="logo">
+        </div>
+        <a href="navbar.html" id="nav-home">首页</a>
+        <a href="role.html" id="nav-characters">角色</a>
+        <a href="world.html" id="nav-world">世界</a>
+        <a href="https://www.miyoushe.com/sr" id="nav-community">社区</a>
+        <div id="underline"></div>
+    </div>
+    <img src="image/video.png" alt="Video Thumbnail" id="thumbnail">
+    <div id="overlay">
+        <div class="video-container" id="video-container">
+            <video src="video/2.mp4" type="video/mp4" controls loop></video>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var thumbnail = document.getElementById('thumbnail');
+            var videoContainer = document.getElementById('video-container');
+            var overlay = document.getElementById('overlay');
+            var video = document.querySelector('video');
+
+            thumbnail.addEventListener('click', function () {
+                videoContainer.style.display = 'flex';
+                overlay.style.display = 'block';
+                video.play();
+            });
+            video.addEventListener('click', function (event) {
+                event.stopPropagation(); // 阻止事件向上传播
+            });
+            overlay.addEventListener('click', function () {
+                videoContainer.style.display = 'none';
+                overlay.style.display = 'none';
+                video.pause();
+                video.currentTime = 0;
+            });
+        });
+    </script>
+</body>
+
+</html>
